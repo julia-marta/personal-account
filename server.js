@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
   next()
 }
 
-server.post('/users', (req, res) => {
+server.post('/api/users', (req, res) => {
   const {login, password} = req.body;
   const users = db.getState().users;
 
