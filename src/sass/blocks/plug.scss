@@ -1,0 +1,42 @@
+.plug {
+  width: 35%;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.2;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 170px;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__greeting {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

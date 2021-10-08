@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 0;
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+
+    &--sub {
+      font-size: 22px;
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+
+  &__info {
+    margin-left: auto;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    margin: 0 15px;
+    border-radius: 50%;
+  }
+
+  &__link {
+    font-size: 28px;
+    line-height: 1;
+  }
+}

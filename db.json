@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "test@ya.ru",
+      "password": "qwerty12345",
+      "avatar": "11.jpg",
+      "token": "test123"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Bradley Malone",
+      "phone": "+7-(111)-111-11-11",
+      "email": "brad@go.ru",
+      "avatar": "1.jpg",
+      "id": 1
+    },
+    {
+      "name": "Johanna Stevens",
+      "phone": "+7-222-222-22-22",
+      "email": "johanna@go.ru",
+      "avatar": "2.jpg",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Marvin Lambert",
+      "phone": "+7-333-333-33-33",
+      "email": "marvin@go.ru",
+      "avatar": "3.jpg"
+    },
+    {
+      "name": "Fred Haynes",
+      "phone": "+7-(444)-444-44-44",
+      "email": "fred@go.ru",
+      "avatar": "4.jpg",
+      "id": 4
+    },
+    {
+      "name": "Rose Peters",
+      "phone": "+7-(555)-555-55-55",
+      "email": "rose@go.ru",
+      "avatar": "5.jpg",
+      "id": 5
+    },
+    {
+      "name": "Test User",
+      "phone": "+7-(123)-123-12-31",
+      "email": "test@go.ru",
+      "avatar": "7.jpg",
+      "id": 7
+    },
+    {
+      "name": "Test User 2",
+      "phone": "+7-(677)-777-77-79",
+      "email": "test1@gogo.ru",
+      "avatar": "9.jpg",
+      "id": 8
+    }
+  ]
+}

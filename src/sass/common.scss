@@ -1,0 +1,43 @@
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", "Arial", sans-serif;
+  color: #1A1C1D;
+  background-color: #FAF9FF ;
+  overflow-x: hidden;
+}
+
+a {
+  color: #1A1C1D;
+  text-decoration: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden,
+label.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

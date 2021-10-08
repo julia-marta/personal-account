@@ -1,0 +1,38 @@
+# Список всех контактов
+GET http://localhost:5000/contacts HTTP/1.1
+
+###
+
+# Создание контакта
+POST http://localhost:5000/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Test Malone",
+    "phone": "+7-123-123-12-31",
+    "email": "test1@go.ru",
+    "avatar": "malone.jpg"
+}
+
+###
+
+# Редактирование контакта
+PUT http://localhost:5000/contacts/6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Test Fred",
+    "phone": "+7-123-123-12-31",
+    "email": "test1@go.ru",
+    "avatar": "haynes.jpg"
+}
+
+###
+
+# Удаление контакта
+DELETE http://localhost:5000/contacts/6 HTTP/1.1
+
+###
+
+# Поиск контактов
+GET http://localhost:5000/contacts?q=test HTTP/1.1
