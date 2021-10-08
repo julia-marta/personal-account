@@ -11,6 +11,20 @@ Single Page Application с клиентом на React.js и REST API автор
 * [axios](https://redux-toolkit.js.org/) - HTTP клиент для API
 * [Create React App](https://github.com/facebook/create-react-app) - настройка, сборка, управление
 
+## Демонстрация
+
+Логин:
+```bash
+test@ya.ru
+```
+
+Пароль:
+```bash
+qwerty12345
+```
+
+[Ссылка на демонстрацию](https://personal-acc.herokuapp.com/)
+
 ## Описание и функционал
 
 В приложении две страницы:
@@ -37,13 +51,6 @@ Single Page Application с клиентом на React.js и REST API автор
 ![Контакты](http://dl4.joxi.net/drive/2021/10/08/0019/2288/1284336/36/26d3c8b7d2.jpg)
 
 Доступна возможность добавлять/удалять/редактировать контакты, а также поиск контактов по именам, номерам телефонов и e-mail адресам.
-
-### Тестовый вход
-
-```bash
-test@ya.ru
-qwerty12345
-```
 
 ## Запуск приложения
 
