@@ -1,4 +1,5 @@
 const jsonServer = require('json-server')
+const path = require('path');
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults({
@@ -15,6 +16,10 @@ module.exports = (req, res, next) => {
   res.header('Content-Type', 'application/json')
   next()
 }
+
+server.get('/:page', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 
 server.post('/api/users', (req, res) => {
   const {login, password} = req.body;
