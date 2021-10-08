@@ -1,7 +1,6 @@
 {
   "name": "personal-account",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -10,6 +9,7 @@
     "axios": "^0.22.0",
     "bootstrap": "^5.1.1",
     "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.13",
     "react": "^17.0.2",
@@ -23,8 +23,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "client": "react-scripts start",
     "server": "nodemon server.js",
-    "start": "concurrently --kill-others-on-fail \"npm:server\" \"react-scripts start\"",
+    "dev": "cross-env NODE_ENV=development concurrently --kill-others-on-fail \"npm:server\" \"npm:client\"",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
