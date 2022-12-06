@@ -27,6 +27,7 @@
     "client": "react-scripts start",
     "server": "nodemon server.js",
     "dev": "cross-env NODE_ENV=development concurrently --kill-others-on-fail \"npm:server\" \"npm:client\"",
+    "deploy": "cross-env NODE_ENV=production concurrently --kill-others-on-fail \"npm:server\" \"npm:client\"",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
