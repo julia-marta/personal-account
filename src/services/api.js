@@ -1,6 +1,6 @@
 const axios = require(`axios`);
 
-const TIMEOUT = 1000;
+const TIMEOUT = 10000;
 const SERVER_URL =
   process.env.NODE_ENV === "development"
     ? `http://localhost:5000/api`
