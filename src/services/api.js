@@ -18,7 +18,6 @@ class API {
     const response = await this._http.request({
       url,
       ...options,
-      withCredentials: false,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "*",
