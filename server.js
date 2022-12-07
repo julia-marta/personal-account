@@ -6,16 +6,26 @@ const middlewares = jsonServer.defaults({
   static: "./build",
 });
 const db = router.db;
+const cors = require("cors");
 
 const port = process.env.PORT || 5000;
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
+server.use(
+  cors({
+    origin: true,
+    credentials: true,
+    preflightContinue: false,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
+server.options("*", cors());
 
 module.exports = (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://personal-account.onrender.com");
-  next();
-};
+  res.header('Content-Type', 'application/json')
+  next()
+}
 
 server.get("/:page", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));

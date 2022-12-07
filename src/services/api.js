@@ -18,7 +18,7 @@ class API {
     const response = await this._http.request({
       url,
       ...options,
-      withCredentials: false
+      withCredentials: true
     });
     return response.data;
   }
