@@ -14,6 +14,7 @@ server.use(jsonServer.bodyParser)
 
 module.exports = (req, res, next) => {
   res.header('Content-Type', 'application/json')
+  res.header('Access-Control-Allow-Origin', '*')
   next()
 }
 
