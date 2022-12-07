@@ -1,19 +1,30 @@
 const axios = require(`axios`);
 
 const TIMEOUT = 1000;
-const SERVER_URL = process.env.NODE_ENV === 'development' ? `http://localhost:5000/api` : `https://personal-account-api.onrender.com/api`;
+const SERVER_URL =
+  process.env.NODE_ENV === "development"
+    ? `http://localhost:5000/api`
+    : `https://personal-account-api.onrender.com/api`;
 
 class API {
-
   constructor(baseURL, timeout) {
     this._http = axios.create({
       baseURL,
-      timeout
+      timeout,
     });
   }
 
   async _load(url, options) {
-    const response = await this._http.request({url, ...options, withCredentials: false});
+    const response = await this._http.request({
+      url,
+      ...options,
+      withCredentials: false,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Credentials": "true",
+      },
+    });
     return response.data;
   }
 
@@ -28,14 +39,14 @@ class API {
   editContact(id, data) {
     return this._load(`/contacts/${id}`, {
       method: `PUT`,
-      data
+      data,
     });
   }
 
   addContact(data) {
     return this._load(`/contacts`, {
       method: `POST`,
-      data
+      data,
     });
   }
 
@@ -48,7 +59,7 @@ class API {
   loginUser(data) {
     return this._load(`/users`, {
       method: `POST`,
-      data
+      data,
     });
   }
 }
@@ -57,7 +68,7 @@ const defaultAPI = new API(SERVER_URL, TIMEOUT);
 
 const apiFactory = {
   API,
-  getAPI: () => defaultAPI
+  getAPI: () => defaultAPI,
 };
 
 export default apiFactory;
