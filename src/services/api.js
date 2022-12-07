@@ -4,7 +4,7 @@ const TIMEOUT = 1000;
 const SERVER_URL =
   process.env.NODE_ENV === "development"
     ? `http://localhost:5000/api`
-    : `http://personal-account-api.onrender.com/api`;
+    : `https://personal-account-api.onrender.com/api`;
 
 class API {
   constructor(baseURL, timeout) {
