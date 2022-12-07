@@ -1,6 +1,6 @@
 const axios = require(`axios`);
 
-const TIMEOUT = 10000;
+const TIMEOUT = 1000;
 const SERVER_URL =
   process.env.NODE_ENV === "development"
     ? `http://localhost:5000/api`
@@ -18,11 +18,7 @@ class API {
     const response = await this._http.request({
       url,
       ...options,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Credentials": "true",
-      },
+      withCredentials: false
     });
     return response.data;
   }
